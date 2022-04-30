@@ -7,6 +7,10 @@ export default defineConfig({
         // 1. Imported from an installed npm package
         installedIntegration(), 
     ],
-    outDir: './directory'
+    outDir: './directory',
+    build: {
+        // Example: Generate `page.html` instead of `page/index.html` during build.
+        format: 'file'
+      }
 
 });
