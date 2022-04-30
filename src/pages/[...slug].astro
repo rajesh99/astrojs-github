@@ -1,0 +1,112 @@
+---
+// src/pages/dogs/[dog].astro
+
+import Cities from '../data/Cities';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Industries from '../data/Industries';
+import Contractors from '../data/Contractors';
+
+export function getStaticPaths() {
+  var params = [];
+  Cities.map(city=> {
+     Industries.map(category=> {
+       params.push(
+         {params: { "slug": `${city.name}/${category.name}` }}
+       );
+     })
+  })
+
+  return params;
+  // return [
+
+  //   // Generates: /dogs/spot
+  //   {params: { "slug": "a/b" }},
+  //      {params: { "slug": "HVAC Contractors/Kakinada" }},
+  // ];
+}
+---
+
+<SiteLayout>
+
+        <section class="breadcrumb-section">
+            <div class="container">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">New York</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">HVAC Contractors</li>
+                </ol>    
+            </div>
+        </section>
+
+        <section class="contractors-section">
+            <div class="container">
+                <div class="main-head d-flex align-items-center ">
+                    <div class="bg-light-blue img-icon">
+                        <img src="../../images/hvac-contractors.svg">
+                    </div>
+                    <div class="heading">
+                        <h3>HVAC Contractors</h3>
+                    </div>
+                </div>
+
+
+                  <div class="contractors-list">
+                    {Contractors.map(item=> {
+   return(
+       (<div class="contractors-box d-flex justify-content-between">
+                        <div class="contractors-img">
+                            <img src={'../../../' +  item.src}>
+                        </div>
+                        <div class="contractors-info">
+                            <div class="d-flex justify-content-between me-auto contractors-content">
+                                <div class="heading me-2">
+                                    <h3 class="mb-3 font-w-700">{item.name}</h3>
+                                    <p>{item.description}</p>
+                                </div>
+                                <div class="contractors-review">
+                                    <div class="green-box d-flex align-items-center">
+                                        <img src="../../../images/star-icon.svg"><span>{item.rating}</span>
+                                    </div>
+                                    <p>{item.reviews} reviews</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pt-4 location-time">
+                                <div class="d-flex align-items-center me-md-3">
+                                    <img src="../../../images/location.svg" class="me-2">
+                                    <p class="mb-0">{item.location}</p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="../../../images/calender.svg" class="me-2">
+                                    <p class="mb-0">{item.opening_days}</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>)
+   )
+                    })
+
+                    }
+
+                    <div class="pagintaion d-none d-lg-block">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="reload d-lg-none text-center">
+                        <a href="#"><i class="fa-solid fa-arrow-rotate-right pe-2"></i><span>Load More</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+</SiteLayout>

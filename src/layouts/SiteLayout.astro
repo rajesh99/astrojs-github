@@ -1,0 +1,63 @@
+---
+// Example: src/layouts/MySiteLayout.astro
+
+import '../css/slider.css'
+import "../css/style.css"
+import  "../css/responsive.css"
+---
+<html>
+  <head>
+ 
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/slider.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  </head>
+  <body>
+
+    <article>
+            <header class="d-flex align-items-center bg-blue">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div>
+                    <img src="../../images/logo-white.png">
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="search-icon">
+                        <a href="#">
+                            <img src="../../images/search-icon.svg">
+                        </a>
+                    </div>
+                    <div class="border-btn d-none d-lg-block">
+                        <a href="#">Join Our Business Listing</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+      <slot /> <!-- your content is injected here -->
+
+              <section class="social-section"> 
+            <div class="container text-center">
+                <div class="border-btn blue-border  d-lg-none">
+                    <a href="#">Join Our Business Listing</a>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <a href="#" class="mx-3" target="_blank"><img src="../../images/facebook.svg"></a>
+                    <a href="#" class="mx-3" target="_blank"><img src="../../images/twitter.svg"></a>
+                    <a href="#" class="mx-3" target="_blank"><img src="../../images/instagram.svg"></a>
+                </div>
+                <div class="mt-4 copy-text">copyright@servicefolder</div>
+            </div>
+        </section>
+
+    </article>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="module" src={(await import("../js/slider.js?url")).default}></script>
+        
+  </body>
+</html>
