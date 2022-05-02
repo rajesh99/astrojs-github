@@ -17,7 +17,7 @@ import Categories from '../data/Categories';
                     {Industries.map((item) => {
                         return (
                         <div class="slider__slide"  >
-                           <a href={'categories/' + item.name + '-search'  } class="tag">{item.name}</a>
+                           <a href={ item.name.split(" ").join("-").toLowerCase() + '-search'  } class="tag">{item.name}</a>
                         </div>
                         )
                     })}
@@ -144,7 +144,7 @@ import Categories from '../data/Categories';
                             {Industries.map(item=> {
                                 return (
                                 <div class="slider__slide">
-                                   <a href={"categories/" + item.name + '-search' } class="industries-box">
+                                   <a href={ item.name.split(" ").join("-").toLowerCase() + '-search'  } class="industries-box">
                                         <img src={item.image}>
                                         <div class="industries-text">{item.name}</div>
                                     </a>

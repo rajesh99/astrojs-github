@@ -3,31 +3,61 @@ export default [
         name:"New York",
     },
     {
-        name:"California",
+        name:"Los Angeles",
     },
     {
-        name:"Illinois",
+        name:"Chicago",
     }, 
        {
-        name:"Texas",
+        name:"Houston",
     },
     {
-        name:"Chittoor",
+        name:"Phoenix",
     },
     {
-        name:"Dowlaiswaram",
+        name:"Philadelphia",
     },
     {
-        name:"Eluru",
+        name:"San Antonio",
     },
     {
-        name:"Guntur",
+        name:"San Diego",
     },
     {
-        name:"Kadapa",
+        name:"Dallas",
     },
     {
-        name:"Kakinada",
+        name:"San Jose",
+    },
+    {
+        name:"Austin",
+    },
+    {
+        name:"Jacksonville",
+    },
+    {
+        name:"Fort Worth",
+    },
+    {
+        name:"Columbus",
+    },
+    {
+        name:"Indianapolis",
+    },
+    {
+        name:"Charlotte",
+    },
+    {
+        name:"San Francisco",
+    },
+    {
+        name:"Seattle",
+    },
+    {
+        name:"Denver",
+    },
+    {
+        name:"Seattle",
     },
     
 
