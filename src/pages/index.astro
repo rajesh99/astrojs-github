@@ -168,30 +168,18 @@ import Categories from '../data/Categories';
                     </div>
                 </div>
                 <div class="row d-lg-none">
-                    <div class="col-lg-3">
-                        <div class="industries-box">
-                            <img src="../../images/air-duct-cleaning.jpg">
-                            <div class="industries-text">Air Duct Cleaning</div>
-                        </div>
+                 {Industries.map(item=> {
+                                return (
+                            <div class="col-lg-3">
+                       <a href={ item.name.split(" ").join("-").toLowerCase() + '-search'  } class="industries-box">
+                                        <img src={item.image}>
+                                        <div class="industries-text">{item.name}</div>
+                 </a>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="industries-box">
-                            <img src="../../images/alarm-security.jpg">
-                            <div class="industries-text">Alarm & Security</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="industries-box">
-                            <img src="../../images/appliance-repair.jpg">
-                            <div class="industries-text">Appliance Repair</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="industries-box">
-                            <img src="../../images/computer-repair.jpg">
-                            <div class="industries-text">Computer Repair</div>
-                        </div>
-                    </div>
+                               
+                                )
+                            })}
+
                 </div>
 
                 

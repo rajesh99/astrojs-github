@@ -46,7 +46,7 @@ export function getStaticPaths() {
                         <img src="../../images/hvac-contractors.svg">
                     </div>
                     <div class="heading">
-                        <h3>HVAC Contractors</h3>
+                        <h3>{slug.toString().split('/')[0].split("-").map((word) => word[0].toUpperCase()  + word.slice(1).toLowerCase()).join(" ")}</h3>
                     </div>
                 </div>
 
