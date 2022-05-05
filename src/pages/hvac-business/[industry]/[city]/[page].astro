@@ -37,8 +37,6 @@ Contractors = data.results;
  }
  
 
-
- const allPosts = ["Post1","pis-2"];
   return  formattedCities.map(  (tag) => {
 
 
@@ -46,7 +44,7 @@ Contractors = data.results;
 
     const paginated =  paginate(tag.Contractors, {
       params: { industry:tag.industry.split(" ").join("-").toLowerCase(), city:tag.city.split(" ").join("-").toLowerCase() },
-      pageSize: 10
+      pageSize: 15
     });
 
     return paginated;
@@ -57,7 +55,7 @@ Contractors = data.results;
 // you need to render a single page (see next section).
 const { page } = Astro.props;
 
-
+console.log(page);
 ---
 <!-- ... -->
 
@@ -127,10 +125,10 @@ const { page } = Astro.props;
                         <ul>
                             <li><a href={page.url.prev ? page.url.prev : "#"}><i class="fa-solid fa-angle-left"></i></a></li>
                       
-                            {[...Array(page.lastPage > 3 ? 4 : page.lastPage).keys()].map(item => {
-                              return (  <li><a href={`/hvac-business/${slug.industry}/${slug.city}/${item + page.currentPage}`}>{item + page.currentPage  }</a></li>)
+                            {[...Array(page.lastPage > 4 ? 4 : (page.lastPage - page.currentPage) + 1).keys()].map(item => {
+                              return (  <li class={page.currentPage== (item + page.currentPage) ? "active" : "not"}><a  href={`/hvac-business/${slug.industry}/${slug.city}/${item + page.currentPage}`}>{item + page.currentPage  }</a></li>)
                             })}
-                            <li><a href="#">...</a></li>
+                           
                             <li><a href={page.url.next ? page.url.next : "#"}><i class="fa-solid fa-angle-right"></i></a></li>
                         </ul>
                     </div>
