@@ -1,0 +1,9 @@
+Steps:
+cd v1-bootstrap
+npm install
+npm run build
+copy directory/* to ../appengine/src/main/webapp
+
+#now appengine
+cd ../appengine
+mvn package appengine:run
