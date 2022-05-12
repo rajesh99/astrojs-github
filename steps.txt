@@ -6,4 +6,6 @@ copy directory/* to ../appengine/src/main/webapp
 
 #now appengine
 cd ../appengine
-mvn package appengine:run
+
+#now deploy to appengine
+mvn package com.google.cloud.tools:appengine-maven-plugin:deploy
