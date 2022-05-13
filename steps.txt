@@ -1,10 +1,13 @@
 Steps:
+Prereq:
+#install node
 cd v1-bootstrap
 npm install
 npm run build
 copy directory/* to ../appengine/src/main/webapp
 
 #now appengine
+#prereq: install google cloud sdk, maven
 cd ../appengine
 
 #now deploy to appengine
