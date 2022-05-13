@@ -1,6 +1,5 @@
-Steps:
-Prereq:
-#install node
+#Steps:
+#Prereq:#install node
 cd v1-bootstrap
 npm install
 npm run build
