@@ -2,6 +2,7 @@
 import Cities from '../data/Cities';
 import Industries from '../data/Industries';
 import MySiteLayout from '../layouts/SiteLayout.astro';
+import herobg from "../assets/images/banners/banner1.jpg"
  const { category } = Astro.params;
 
 export function getStaticPaths() {
@@ -36,31 +37,33 @@ export function getStaticPaths() {
             </div>
         </section>
 
-
-        <section class="page-banner-section">
-            <div class="container d-flex flex-wrap flex-lg-nowrap justify-content-between align-items-center bg-light-blue">
-                <div class="heading">
-                    <h2 class="font-w-700">Find the Nearby area</h2>
-                    <h3>Let’s make your search easier and useful</h3>
+        <section class="hero-section  container position-relative  bg-background opacity-50" style={`background:url(${herobg}) center center`  } >
+          <div class="banner-1 cover-image sptb-2" data-bs-image-src="../assets/images/banners/banner1.jpg" style={`background:url(${herobg}) center center`  } data-select2-id="18">
+    <div class="header-text1 mb-0" data-select2-id="17">
+        <div class="" data-select2-id="16">
+            <div class="row" data-select2-id="15">
+            <div class="col-xl-11 col-lg-12 col-md-12 d-block mx-auto" data-select2-id="14">
+                <div class="text-left text-white font-weight-bold mb-4"><h1 class="h1">
+              Find Services in your City</h1>
                 </div>
-                <div class="page-banner-img">
-                    <div>
-                        <img src="../../images/location-img.png" class="w-100">
-                    </div>
+                <div class="text-left text-white">
+                <p class="h5 mb-4">
+                            <img src="../../../../assets/images/image-removebg-preview.png" alt=""  height="50" width="50"/>
+                </p>
                 </div>
             </div>
-        </section>
-
+           
+            </div>
+        </div>
+    </div>
+  
+</div>
+</section>  
+        
 
 
         <section class="search-section">
             <div class="container">
-                <div class="search-box">
-                    <form>
-                        <input type="text" class="form-control" placeholder="Search city">
-                        <button type="submit" class="serch-btn d-flex align-items-center"><img src="../../images/search-icon.svg">Find</button>
-                    </form>
-                </div>
                 <div>
                     <div class="heading">
                         <h3 class="font-w-700">List of Cities</h3>
@@ -69,7 +72,7 @@ export function getStaticPaths() {
                         <ul>
                         {Cities.map(item=> {
                             return (
-                                <li><a href={`hvac-business/${category}/${item.name.split(" ").join("-").toLowerCase()}/1/`}>{item.name}</a></li>
+                                <li class="list-item"><a class="nav-item" href={`hvac-business/${category}/${item.name.split(" ").join("-").toLowerCase()}/1/`}>{item.name}</a></li>
                             )
                         })}
                             

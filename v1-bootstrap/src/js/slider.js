@@ -11,7 +11,7 @@
           },
           desktop : {
               width : 1300,
-              items : 7
+              items : 6
           },
           deviceChanged : function(e){
               console.log(e);

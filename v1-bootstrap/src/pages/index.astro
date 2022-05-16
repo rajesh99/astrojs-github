@@ -3,13 +3,28 @@ import Industries from '../data/Industries';
 // Example: src/pages/index.astro
 import MySiteLayout from '../layouts/SiteLayout.astro';
 import Categories from '../data/Categories';
+import herobg from "../assets/images/banners/banner1.jpg"
 
 ---
 <MySiteLayout>
-
-
-
-
+        <section class="hero-section  container-fluid position-relative  bg-background opacity-50" style={`background:url(${herobg}) center center`  } >
+          <div class="banner-1 cover-image sptb-2" data-bs-image-src="../assets/images/banners/banner1.jpg" style={`background:url(${herobg}) center center`  } data-select2-id="18">
+    <div class="header-text1 mb-0" data-select2-id="17">
+        <div class="container" data-select2-id="16">
+            <div class="row" data-select2-id="15">
+                <div class="col-xl-9 col-lg-12 col-md-12 d-block mx-auto" data-select2-id="14">
+                    <div class="text-center text-white font-bold"><h1 class="">
+Fastest Service Business Directory in the World</h1></div>
+<div class="text-center text-white"><h5 class="">
+Discover businesses near you with ratings and reviews
+</h5></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</div>
+</section>
         <section class="slider-section categories-slider">
             <div class="slider-container container p-0">
                 <div id="slider-2" class="slider d-none d-lg-block">
@@ -42,100 +57,49 @@ import Categories from '../data/Categories';
             </div>
         </section>
 
-        <section class="hero-section bg-blue container-fluid">
-            <div class="row">
-                <div class="col-lg-6 hero-info">
-                    <div class="hero-content">
-                        <div class="heading">
-                            <h1 class="white-text">List your Business Online.</h1>
-                            <h2 class="white-text">ServiceFolder is the easiest way to start, run and grow your online business.</h2>
-                        </div>
-                        <div class="fill-btn">
-                            <a href="#">Let’s Get Started with us</a>
-                        </div>
-                        <div class="app-link d-flex align-items-center">
-                            <div class="white-text me-3">Also available on</div>
-                            <div class="d-flex align-items-center">
-                                <a href="#" class="me-2"><img src="../../images/play-store-icon.svg"></a>
-                                <a href="#" class="ms-1"><img src="../../images/app-store-icon.svg"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 hero-slider p-0">
-                    <div class="hero-review h-100 d-none d-lg-block">
-                        <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner h-100">
-                                <div class="carousel-item h-100 active" style="background-image: url(images/slider-img-01.jpg);">
-                                    <div class="review-box">  
-                                      <div class="head white-text">Gold Cleaning Company</div>
-                                      <div class="d-flex review-star mb-3">
-                                          <div class="d-flex">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                          </div>
-                                          <div class="white-text font-w-700 ps-4">5.0</div>
-                                      </div>
-                                      <div class="white-text total-review">45 reviews</div>   
-                                    </div>
-                                </div>
-                                <div class="carousel-item h-100" style="background-image: url(images/slider-img-01.jpg);">
-                                    <div class="review-box">  
-                                      <div class="head white-text">Gold Cleaning Company 02</div>
-                                      <div class="d-flex review-star mb-3">
-                                          <div class="d-flex">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                          </div>
-                                          <div class="white-text font-w-700 ps-4">5.0</div>
-                                      </div>
-                                      <div class="white-text total-review">45 reviews</div>   
-                                    </div>
-                                </div>
-                                <div class="carousel-item h-100" style="background-image: url(images/slider-img-01.jpg);">
-                                    <div class="review-box">  
-                                      <div class="head white-text">Gold Cleaning Company 03</div>
-                                      <div class="d-flex review-star mb-3">
-                                          <div class="d-flex">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                              <img src="../../images/star-yollow.svg">
-                                          </div>
-                                          <div class="white-text font-w-700 ps-4">5.0</div>
-                                      </div>
-                                      <div class="white-text total-review">45 reviews</div>   
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section class="my-5">
+     <div class="container">
+       <div class="row">
+       <div class="col-xl-6 col-md-6 m-0 p-0"> <div class="card"> <div class="item-card">
+        <div class="item-card-desc">
+        <a href="#"></a> <div class="item-card-img">
+         <img src="../assets/images/products/car/1.jpg" alt="img" class="br-te-7 br-ts-7"> </div>
+          <div class="item-card-text">
+          
+        </div>
             </div>
-        </section>
+            </div>
+            </div>
+            </div>
 
+           <div class="col-xl-6 col-md-6 m-0 p-0 "> 
+           <div class="card px-0 mx-0"> 
+           
+            <div class="item-card">
+                    <div class="item-card-desc">
+                            <a href="#"></a>
+                            <div class="item-card-img">
+                            <img src="../assets/images/products/car/1.jpg" alt="img" class="br-te-7 br-ts-7"> 
+                            </div>
+                            <div class="item-card-text">
+                            
+                            </div>
+                   </div>
+            </div>
+       </div>
+            </div>
+       </div>
+     </div>
+</section>
 
         <section class="industries-section">
             <div class="container">
-                <div class="d-flex align-items-center justify-content-between industries-bar">
-                    <div class="heading">
-                        <h2 class="font-w-700">Industries</h2>
+                <div class="d-flex align-items-center justify-content-center industries-bar">
+                    <div class="heading text-center">
+                        <h2 class="font-w-700 h1">Search By Service Category</h2>
+                        <p class="h5">Discover businesses near you with ratings and reviews</p>
                     </div>
-                    <div class="arrow-btn d-flex align-items-center">
-                        <a href="#" class="d-flex align-items-center">View all <img src="../../images/black-arrow.svg" class="ps-2"></a>
-                    </div>
+                    
                 </div>
                 <div class="slider-section industries-slider d-none d-lg-block">
                     <div class="slider-container container p-0">
@@ -146,12 +110,11 @@ import Categories from '../data/Categories';
                                 <div class="slider__slide">
                                    <a href={ item.name.split(" ").join("-").toLowerCase() + '-search'  } class="industries-box">
                                         <img src={item.image}>
-                                        <div class="industries-text">{item.name}</div>
+                                        <div class="industries-text text-center">{item.name}</div>
                                     </a>
                                 </div>
                                 )
                             })}
-
                                 
                             </div>
 
@@ -187,74 +150,8 @@ import Categories from '../data/Categories';
         </section>
 
 
-        <section class="testimonials-section">
-            <div class="container top-heading">
-                <div class="heading">
-                    <h2 class="font-w-700">Testimonials</h2>
-                </div>
-            </div>
-
-            <div class="bg-light-blue testimonial-content">
-                <div class="container ">
-                    <div class="heading">
-                        <h1>“We love ServiceFolder.”</h1>
-                        <h2>Okay, we wrote these testimonials on their behalf. But you get the idea.</h2>
-                    </div>
-
-                    <div class="testimonial-slider">
-                        <div id="carouselExampleIndicators01" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="testimonial-box">  
-                                      <h2 class="font-w-700">“This is the best Platform to list your business online and this will give you high quailty leads and list your company on a top level” 01</h2>
-                                      <div class="author-name"><strong>Kartik,</strong> Himachal predesh</div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="testimonial-box">  
-                                      <h2 class="font-w-700">“This is the best Platform to list your business online and this will give you high quailty leads and list your company on a top level” 02</h2>
-                                      <div class="author-name"><strong>Kartik,</strong> Himachal predesh</div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="testimonial-box">  
-                                      <h2 class="font-w-700">“This is the best Platform to list your business online and this will give you high quailty leads and list your company on a top level” 03</h2>
-                                      <div class="author-name"><strong>Kartik,</strong> Himachal predesh</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators01" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators01" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators01" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="dream-section bg-blue">
-            <div class="circle d-none d-lg-block">
-                <div class="shape-01"></div>
-                <div class="shape-02"></div>
-                <div class="shape-03"></div>
-                <div class="shape-04"></div>
-            </div>
-            <div class="container text-center">
-                <div class="heading">
-                    <h1 class="white-text">Chase your dreams. Start your List your company on online store.</h1>
-                    <h2 class="white-text">Take your business online with ServiceFolder. Get your free online store in 30 seconds.</h2>
-                </div>
-                <div class="fill-btn">
-                    <a href="#">Let’s Get Started with us</a>
-                </div>
-            </div>
-        </section>
-
-
-
+  
+     
         <!-- Modal -->
         <div class="modal fade categories-modal" id="exampleModal" tabindex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
