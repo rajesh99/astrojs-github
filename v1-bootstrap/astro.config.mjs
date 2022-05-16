@@ -4,7 +4,8 @@ export default defineConfig({
     outDir: './directory',
     build: {
         // Example: Generate `page.html` instead of `page/index.html` during build.
-        format: 'file'
+        format: 'file',
+        site: 'https://www.servicefolder.com/directory',
       }
 
 });

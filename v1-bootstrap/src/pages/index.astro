@@ -2,7 +2,6 @@
 import Industries from '../data/Industries';
 // Example: src/pages/index.astro
 import MySiteLayout from '../layouts/SiteLayout.astro';
-import Categories from '../data/Categories';
 import herobg from "../assets/images/banners/banner1.jpg"
 
 ---
@@ -61,7 +60,7 @@ Discover businesses near you with ratings and reviews
             { Industries.map(item => {
                 return (
                     
-                     <a class="list-group-item list-group-item-action">
+                     <a  href={ item.cleanUrl + '-search.html'  } class="list-group-item list-group-item-action">
                      
                        {item.name}
                      

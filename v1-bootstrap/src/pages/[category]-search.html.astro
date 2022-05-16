@@ -21,8 +21,8 @@ export function getStaticPaths() {
         <section class="breadcrumb-section">
             <div class="container">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">{category.toString().split("-").map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href={category + "-search.html"}>{category.toString().split("-").map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
         .join(' ')}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Search</li>
                 </ol>    
