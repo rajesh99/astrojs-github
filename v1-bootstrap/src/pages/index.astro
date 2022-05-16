@@ -32,7 +32,7 @@ Discover businesses near you with ratings and reviews
                     {Industries.map((item) => {
                         return (
                         <div class="slider__slide"  >
-                           <a href={ item.name.split(" ").join("-").toLowerCase() + '-search'  } class="tag">{item.name}</a>
+                           <a href={ item.cleanUrl + '-search.html'  } class="tag">{item.name}</a>
                         </div>
                         )
                     })}
@@ -129,7 +129,7 @@ Discover businesses near you with ratings and reviews
                             {Industries.map(item=> {
                                 return (
                                 <div class="slider__slide">
-                                   <a href={ item.name.split(" ").join("-").toLowerCase() + '-search'  } class="industries-box">
+                                   <a href={ item.cleanUrl + '-search.html'  }  class="industries-box">
                                         <img src={item.image}>
                                         <div class="industries-text text-center">{item.name}</div>
                                     </a>
@@ -155,7 +155,7 @@ Discover businesses near you with ratings and reviews
                  {Industries.map(item=> {
                                 return (
                             <div class="col-lg-3">
-                       <a href={ item.name.split(" ").join("-").toLowerCase() + '-search'  } class="industries-box">
+                       <a href={ item.cleanUrl + '-search.html'  }  class="industries-box">
                                         <img src={item.image}>
                                         <div class="industries-text">{item.name}</div>
                  </a>

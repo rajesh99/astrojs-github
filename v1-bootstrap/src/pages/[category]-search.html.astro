@@ -9,18 +9,10 @@ export function getStaticPaths() {
   return  Industries.map(item=> {
         return {
             params: {
-                category: item.name.split(" ").join("-").toLowerCase()
+                category: item.cleanUrl
             }
         }
     });
-//   return [
-//     // Generates: /dogs/clifford
-//     {params: {dog: 'clifford'}},
-//     // Generates: /dogs/rover
-//     {params: {dog: 'rover'}},
-//     // Generates: /dogs/spot
-//     {params: {dog: 'spot'}},
-//   ];
 }
 ---
 
@@ -72,7 +64,7 @@ export function getStaticPaths() {
                         <ul>
                         {Cities.map(item=> {
                             return (
-                                <li class="list-item"><a class="nav-item" href={`hvac-business/${category}/${item.name.split(" ").join("-").toLowerCase()}/1/`}>{item.name}</a></li>
+                                <li class="list-item"><a class="nav-item" href={`hvac-business/${category}/${item.cleanUrl}/1.html`}>{item.name}</a></li>
                             )
                         })}
                             

@@ -29,8 +29,8 @@ const data = await response.json();
 Contractors = data.results;
 
       formattedCities.push({
-        city:Cities[i].name,
-        industry:Industries[j].name,
+        city:Cities[i].cleanUrl,
+        industry:Industries[j].cleanUrl,
         Contractors:Contractors
       })
     }
@@ -162,13 +162,13 @@ const { page } = Astro.props;
                     <div class=" d-none d-lg-block">
  
                         <ul class="pagination">
-                            <li class={ page.url.prev ? "page-item page-prev " :"page-item page-prev disabled"}><a class="page-link" href={page.url.prev ? page.url.prev : "#"}>Prev</a></li>
+                            <li class={ page.url.prev ? "page-item page-prev " :"page-item page-prev disabled"}><a class="page-link" href={page.url.prev ? page.url.prev + ".html" : "#"}>Prev</a></li>
                       
                             {[...Array(page.lastPage > 4 ? 4 : (page.lastPage - page.currentPage) + 1).keys()].map(item => {
-                              return (  <li class={page.currentPage== (item + page.currentPage) ? "page-item active" : "page-item"}><a class="page-link" href={`/hvac-business/${slug.industry}/${slug.city}/${item + page.currentPage}`}>{item + page.currentPage  }</a></li>)
+                              return (  <li class={page.currentPage== (item + page.currentPage) ? "page-item active" : "page-item"}><a class="page-link" href={`/hvac-business/${slug.industry}/${slug.city}/${item + page.currentPage}.html`}>{item + page.currentPage  }</a></li>)
                             })}
                            
-                            <li class={page.url.next ? "page-item page-next": "page-item page-next disabled"}><a class="page-link"  href={page.url.next ? page.url.next : "#"}>Next</a></li>
+                            <li class={page.url.next ? "page-item page-next": "page-item page-next disabled"}><a class="page-link"  href={page.url.next ? page.url.next + ".html" : "#"}>Next</a></li>
                         </ul>
                     </div>
                     <div class="reload d-lg-none text-center">
