@@ -168,6 +168,19 @@
   font-size: 18px;
 }
 
+.z-50 {
+z-index:200 !important;
+}
+@media only screen and (max-width: 600px) {
+  .text-lg {
+    font-size: 12px;
+  }
+  header img {
+    width:70%;
+    object-fit: contain;
+    height:40px;
+  }
+}
 
   /*-----hero-section----*/
   .hero-section .hero-info{
