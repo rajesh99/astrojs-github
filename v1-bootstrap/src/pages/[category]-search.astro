@@ -2,7 +2,7 @@
 import Cities from '../data/Cities';
 import Industries from '../data/Industries';
 import MySiteLayout from '../layouts/SiteLayout.astro';
-import herobg from "../assets/images/banners/banner1.jpg"
+import herobg from "@assets/assets/images/banners/banner1.jpg"
  const { category } = Astro.params;
 
 export function getStaticPaths() {
@@ -30,7 +30,7 @@ export function getStaticPaths() {
         </section>
 
         <section class="hero-section  container position-relative  bg-background opacity-50" style={`background:url(${herobg}) center center`  } >
-          <div class="banner-1 cover-image sptb-2" data-bs-image-src="../assets/images/banners/banner1.jpg" style={`background:url(${herobg}) center center`  } data-select2-id="18">
+          <div class="banner-1 cover-image sptb-2" data-bs-image-src={herobg} style={`background:url(${herobg}) center center`  } data-select2-id="18">
     <div class="header-text1 mb-0" data-select2-id="17">
         <div class="" data-select2-id="16">
             <div class="row" data-select2-id="15">

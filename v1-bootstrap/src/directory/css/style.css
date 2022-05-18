@@ -78,7 +78,6 @@
   .bg-blue{
     background: #3473A8 !important;
   }
-
   .bg-light-blue{
     background: #F1F6FA;
   }
@@ -530,7 +529,7 @@
   }
   .breadcrumb-section .breadcrumb-item+.breadcrumb-item::before{
     content: '';
-    background-image: url(../images/arrow-right.svg);
+    background-image: url(/directory/images/arrow-right.svg);
     width: 20px;
     height: 20px;
     margin: 0 8px;

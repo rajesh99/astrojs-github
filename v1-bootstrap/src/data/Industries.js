@@ -1,13 +1,16 @@
+import airLeaningImage from  '@assets/images/air-duct-cleaning.jpg'
+import alarmSecurityImage from  '@assets/images/alarm-security.jpg'
+
 export default [
     {
         name:"Air Duct Cleaning",
-        image:"../../images/air-duct-cleaning.jpg",
+        image:airLeaningImage,
         cleanUrl: "air-duct-cleaning"
 
     },
     {
         name:"Alarm & Security",
-        image:"../../images/alarm-security.jpg",
+        image:alarmSecurityImage,
         cleanUrl: "alarm-and-security"
     },
     // {
