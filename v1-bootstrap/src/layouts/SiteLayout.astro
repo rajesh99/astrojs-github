@@ -2,7 +2,9 @@
 // Example: src/layouts/MySiteLayout.astro
 import "@assets/css/slider.css"
 import "@assets/css/style.css"
+import "@assets/bootstrap/css/bootstrap.min.css"
 import  "@assets/css/responsive.css"
+import  "@assets/fonts/all.min.css"
 import  "@assets/assets/css/style.css"
 import logo from  "@assets/images/logo-white.png"
 import herobg from "@assets/assets/images/banners/banner1.jpg"
@@ -14,8 +16,6 @@ import herobg from "@assets/assets/images/banners/banner1.jpg"
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   </head>
   <body>
@@ -85,7 +85,9 @@ import herobg from "@assets/assets/images/banners/banner1.jpg"
         </section>
 
     </article>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script type="module" src={(await import("../js/popper.min.js?url")).default}></script>
+        <script type="module" src={(await import("../js/bootstrap.min.js?url")).default}></script>
         <script type="module" src={(await import("../js/slider.js?url")).default}></script>
         
   </body>

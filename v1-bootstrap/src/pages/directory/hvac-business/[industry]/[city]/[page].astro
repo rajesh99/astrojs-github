@@ -1,8 +1,8 @@
 ---
-import config from "../../../../../config";
-import Cities from "../../../../data/Cities";
-import Industries from "../../../../data/Industries";
-import SiteLayout from "../../../../layouts/SiteLayout.astro";
+import config from "../../../../../../config";
+import Cities from "../../../../../data/Cities";
+import Industries from "../../../../../data/Industries";
+import SiteLayout from "../../../../../layouts/SiteLayout.astro";
 import herobg from "@assets/assets/images/banners/banner1.jpg"
 import location from "@assets/images/location.svg"
 import calender from "@assets/images/calender.svg"
@@ -67,8 +67,8 @@ const { page } = Astro.props;
         <section class="breadcrumb-section">
             <div class="container">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item"><a href={ "/" + slug.industry + "-search.html"}>{slug.industry.toString().split("-").map((word) => word[0].toUpperCase()  + word.slice(1).toLowerCase()).join(" ")}</a></li>
+                    <li class="breadcrumb-item"><a href="/directory/directory.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href={ "/directory/" + slug.industry + "-search.html"}>{slug.industry.toString().split("-").map((word) => word[0].toUpperCase()  + word.slice(1).toLowerCase()).join(" ")}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{slug.city.toString().split('-').map((word) => word[0].toUpperCase()  + word.slice(1).toLowerCase()).join(" ")}</li>
                 </ol>    
             </div>
@@ -169,7 +169,7 @@ const { page } = Astro.props;
                             <li class={ page.url.prev ? "page-item page-prev " :"page-item page-prev disabled"}><a class="page-link" href={page.url.prev ? page.url.prev.slice(0, -1) + ".html" : "#"}>Prev</a></li>
                       
                             {[...Array(page.lastPage > 4 ? 4 : (page.lastPage - page.currentPage) + 1).keys()].map(item => {
-                              return (  <li class={page.currentPage== (item + page.currentPage) ? "page-item active" : "page-item"}><a class="page-link" href={`/hvac-business/${slug.industry}/${slug.city}/${item + page.currentPage}.html`}>{item + page.currentPage  }</a></li>)
+                              return (  <li class={page.currentPage== (item + page.currentPage) ? "page-item active" : "page-item"}><a class="page-link" href={`/directory/hvac-business/${slug.industry}/${slug.city}/${item + page.currentPage}.html`}>{item + page.currentPage  }</a></li>)
                             })}
                            
                             <li class={page.url.next ? "page-item page-next": "page-item page-next disabled"}><a class="page-link"  href={page.url.next ? page.url.next.slice(0, -1) + ".html" : "#"}>Next</a></li>

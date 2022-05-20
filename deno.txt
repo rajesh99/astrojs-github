@@ -1,0 +1,8 @@
+#Build the files
+ - npm run build
+
+ # Copy dist/directory/directory.html to dist/directory/directory/directory.html 
+ 
+
+# Delete delete (optional) dist/directory/directory.html -(After copying it)
+

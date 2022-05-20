@@ -1,7 +1,7 @@
 ---
-import Industries from '../data/Industries';
+import Industries from '../../data/Industries';
 // Example: src/pages/index.astro
-import MySiteLayout from '../layouts/SiteLayout.astro';
+import MySiteLayout from '../../layouts/SiteLayout.astro';
 import herobg from "@assets/assets/images/banners/banner1.jpg"
 
 ---
@@ -31,7 +31,7 @@ Discover businesses near you with ratings and reviews
                     {Industries.map((item) => {
                         return (
                         <div class="slider__slide"  >
-                           <a href={ item.cleanUrl + '-search.html'  } class="tag">{item.name}</a>
+                           <a href={"/directory/" + item.cleanUrl + '-search.html'  } class="tag">{item.name}</a>
                         </div>
                         )
                     })}
@@ -60,7 +60,7 @@ Discover businesses near you with ratings and reviews
             { Industries.map(item => {
                 return (
                     
-                     <a  href={ item.cleanUrl + '-search.html'  } class="list-group-item list-group-item-action">
+                     <a  href={"/directory" +  item.cleanUrl + '-search.html'  } class="list-group-item list-group-item-action">
                      
                        {item.name}
                      
@@ -128,7 +128,7 @@ Discover businesses near you with ratings and reviews
                             {Industries.map(item=> {
                                 return (
                                 <div class="slider__slide">
-                                   <a href={ item.cleanUrl + '-search.html'  }  class="industries-box">
+                                   <a href={"/directory/" + item.cleanUrl + '-search.html'  }  class="industries-box">
                                         <img src={item.image}>
                                         <div class="industries-text text-center">{item.name}</div>
                                     </a>
@@ -154,7 +154,7 @@ Discover businesses near you with ratings and reviews
                  {Industries.map(item=> {
                                 return (
                             <div class="col-lg-3">
-                       <a href={ item.cleanUrl + '-search.html'  }  class="industries-box">
+                       <a href={"/directory/" +  item.cleanUrl + '-search.html'  }  class="industries-box">
                                         <img src={item.image}>
                                         <div class="industries-text">{item.name}</div>
                  </a>
