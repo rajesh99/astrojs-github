@@ -5,6 +5,8 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/directory/*"],
+      "@src/*":["src/*"],
+      "@public/*" : ["public/directory/*"]
     }
 
   }

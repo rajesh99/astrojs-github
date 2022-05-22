@@ -4,9 +4,8 @@ import "@assets/css/slider.css"
 import "@assets/css/style.css"
 import "@assets/bootstrap/css/bootstrap.min.css"
 import  "@assets/css/responsive.css"
-import  "@assets/fonts/all.min.css"
 import  "@assets/assets/css/style.css"
-import logo from  "@assets/images/logo-white.png"
+import logo from "@assets/images/logo-white.png"
 import herobg from "@assets/assets/images/banners/banner1.jpg"
 ---
 <html>
@@ -43,8 +42,8 @@ import herobg from "@assets/assets/images/banners/banner1.jpg"
       <slot /> <!-- your content is injected here -->
 
       
-        <section class="hero-section  container position-relative  bg-background opacity-50" style={`background:url('${herobg}') center center`  } >
-          <div class="banner-1 cover-image sptb-2" data-bs-image-src={herobg} style={`background:url('${herobg}') center center`  } data-select2-id="18">
+        <section class="hero-section  container position-relative  bg-background opacity-50" style={`background:url('/directory/${herobg}') center center`  } >
+          <div class="banner-1 cover-image sptb-2" style={`background:url('/directory/${herobg}') center center`  }   data-select2-id="18">
     <div class="header-text1 mb-0" data-select2-id="17">
         <div class="" data-select2-id="16">
             <div class="row" data-select2-id="15">
@@ -86,9 +85,9 @@ import herobg from "@assets/assets/images/banners/banner1.jpg"
 
     </article>
 
-        <script type="module" src={(await import("../js/popper.min.js?url")).default}></script>
-        <script type="module" src={(await import("../js/bootstrap.min.js?url")).default}></script>
-        <script type="module" src={(await import("../js/slider.js?url")).default}></script>
+        <script type="module" src={'/directory' + (await import("../js/popper.min.js?url")).default}></script>
+        <script type="module" src={'/directory' + (await import("../js/bootstrap.min.js?url")).default}></script>
+        <script type="module" src={'/directory' + (await import("../js/slider.js?url")).default}></script>
         
   </body>
 </html>

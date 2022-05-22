@@ -1,13 +1,13 @@
 ---
-import Industries from '../../data/Industries';
+import Industries from '@src/data/Industries';
 // Example: src/pages/index.astro
-import MySiteLayout from '../../layouts/SiteLayout.astro';
+import MySiteLayout from '@src/layouts/SiteLayout.astro';
 import herobg from "@assets/assets/images/banners/banner1.jpg"
 
 ---
 <MySiteLayout>
-        <section class="hero-section  container-fluid position-relative  bg-background opacity-50" style={`background:url(${herobg}) center center`  } >
-          <div class="banner-1 cover-image sptb-2" data-bs-image-src={herobg} style={`background:url(${herobg}) center center`  } data-select2-id="18">
+        <section class="hero-section  container-fluid position-relative  bg-background opacity-50" style={`background:url(/directory${herobg}) center center`  } >
+          <div class="banner-1 cover-image sptb-2" data-bs-image-src={herobg} style={`background:url(/directory${herobg}) center center`  } data-select2-id="18">
     <div class="header-text1 mb-0" data-select2-id="17">
         <div class="container" data-select2-id="16">
             <div class="row" data-select2-id="15">
@@ -60,7 +60,7 @@ Discover businesses near you with ratings and reviews
             { Industries.map(item => {
                 return (
                     
-                     <a  href={"/directory" +  item.cleanUrl + '-search.html'  } class="list-group-item list-group-item-action">
+                     <a  href={"/directory/" +  item.cleanUrl + '-search.html'  } class="list-group-item list-group-item-action">
                      
                        {item.name}
                      
@@ -83,7 +83,7 @@ Discover businesses near you with ratings and reviews
        <div class="col-xl-6 col-md-6 m-0 p-0"> <div class="card"> <div class="item-card">
         <div class="item-card-desc">
         <a href="#"></a> <div class="item-card-img">
-         <img src={herobg} alt="img" class="br-te-7 br-ts-7"> </div>
+         <img src={"/directory" + herobg} alt="img" class="br-te-7 br-ts-7"> </div>
           <div class="item-card-text">
           
         </div>
@@ -99,7 +99,7 @@ Discover businesses near you with ratings and reviews
                     <div class="item-card-desc">
                             <a href="#"></a>
                             <div class="item-card-img">
-                            <img src={herobg} alt="img" class="br-te-7 br-ts-7"> 
+                            <img src={"/directory" + herobg} alt="img" class="br-te-7 br-ts-7"> 
                             </div>
                             <div class="item-card-text">
                             
@@ -129,7 +129,7 @@ Discover businesses near you with ratings and reviews
                                 return (
                                 <div class="slider__slide">
                                    <a href={"/directory/" + item.cleanUrl + '-search.html'  }  class="industries-box">
-                                        <img src={item.image}>
+                                        <img src={"/directory" + item.image}>
                                         <div class="industries-text text-center">{item.name}</div>
                                     </a>
                                 </div>
@@ -155,7 +155,7 @@ Discover businesses near you with ratings and reviews
                                 return (
                             <div class="col-lg-3">
                        <a href={"/directory/" +  item.cleanUrl + '-search.html'  }  class="industries-box">
-                                        <img src={item.image}>
+                                        <img src={"/directory" + item.image}>
                                         <div class="industries-text">{item.name}</div>
                  </a>
                     </div>

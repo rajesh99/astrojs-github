@@ -311,7 +311,7 @@ function Slider(el, options) {
 
   function init() {
 
-    if (!el) throw new Error("'El' cannot be null");
+    if (!el) return;
 
     options = extend(defaults, options || {});
 

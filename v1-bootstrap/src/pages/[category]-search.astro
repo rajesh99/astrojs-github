@@ -1,7 +1,7 @@
 ---
-import Cities from '../../data/Cities';
-import Industries from '../../data/Industries';
-import MySiteLayout from '../../layouts/SiteLayout.astro';
+import Cities from '@src/data/Cities';
+import Industries from '@src/data/Industries';
+import MySiteLayout from '@src/layouts/SiteLayout.astro';
 import herobg from "@assets/assets/images/banners/banner1.jpg"
  const { category } = Astro.params;
 
@@ -21,7 +21,7 @@ export function getStaticPaths() {
         <section class="breadcrumb-section">
             <div class="container">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="/directory/directory.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/directory/index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href={"/directory/" + category + "-search.html"}>{category.toString().split("-").map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
         .join(' ')}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Search</li>
